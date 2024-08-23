@@ -1,0 +1,7 @@
+hello
+using JLD, Random, LinearAlgebra, Statistics, CSV, DataFrames, FreqTables, Distributions
+
+function q1()
+    # Set the seed
+    Random.seed!(1234)
+
