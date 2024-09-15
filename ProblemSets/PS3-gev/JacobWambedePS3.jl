@@ -6,7 +6,6 @@
 #University of Oklahoma
 #Importing required packages
 
-
 using Optim
 using HTTP
 using GLM
