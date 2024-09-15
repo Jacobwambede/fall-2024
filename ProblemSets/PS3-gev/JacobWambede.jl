@@ -1,3 +1,12 @@
+# ECON 6343: Econometrics III 
+# Student Name: Jacob Dison Wambede
+# Date: 2024-15-09
+# Problem Set 3: PS3-gev
+#Prof. Tyler Ransom
+#University of Oklahoma
+#Importing required packages
+
+
 using Optim
 using HTTP
 using GLM
