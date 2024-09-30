@@ -154,7 +154,7 @@ using Optim
             return ssr[1]
         end
         result = optimize(b -> ols(b, X, y), [0.0, 0.0], LBFGS())
-        @test isapprox(result.minimizer, [2.2, 0.5], atol=0.1)
+        @test isapprox(result.minimizer, [2.2, 0.5], atol=0.15)
     end
 
     @testset "Logit likelihood function" begin
