@@ -1,3 +1,10 @@
+# ECON 6343: Econometrics III 
+# Student Name: Jacob Dison Wambede
+# Date: 2024-08-09
+# Problem Set 2: PS2-optimization-intro
+#Prof. Tyler Ransom
+#University of Oklahoma
+#Importing required packages
 using Optim
 using HTTP
 using GLM
@@ -7,16 +14,18 @@ using Statistics
 using DataFrames
 using CSV
 using FreqTables
+using CSV
+using FreqTables
+using Optim
 
 # Problem 1: Basic optimization in Julia
 function problem1()
     f(x) = -x[1]^4 - 10x[1]^3 - 2x[1]^2 - 3x[1] - 2
     negf(x) = x[1]^4 + 10x[1]^3 + 2x[1]^2 + 3x[1] + 2
     startval = rand(1)
-    result = optimize(negf, startval, LBFGS())
-    println("Problem 1 result:")
-    println("Maximizer: ", result.minimizer)
-    println("Maximum value: ", -result.minimum)
+    result = optimize(negf, startval, BFGS())
+    println("argmin (minimizer) is ", Optim.minimizer(result)[1])
+    println("min is ", Optim.minimum(result))
 end
 
 # Problem 2: OLS using Optim
