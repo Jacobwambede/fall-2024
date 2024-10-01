@@ -166,7 +166,6 @@ using Test
         dfy_long = DataFrames.stack(dfy, Not([:bus_id, :RouteUsage, :Branded]))
         size(dfy_long, 1) == 20 * size(df, 1)
     end
-
     # Test static model estimation
     @test begin
         url = "https://raw.githubusercontent.com/OU-PhD-Econometrics/fall-2024/master/ProblemSets/PS5-ddc/busdataBeta0.csv"
